@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* Global resets & base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ffffff;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a3318;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #d4a017, #f0c030);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f0c030;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(240, 192, 48, 0.4);
+  color: #0a3318;
+}
+
+/* Utility: smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
