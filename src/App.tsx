@@ -224,7 +224,7 @@ function Hero() {
               boxShadow: "0 0 60px rgba(240,192,48,0.5), 0 0 120px rgba(240,192,48,0.2)",
             }}
           >
-            <img src={logo} alt="logo" className="w-14 h-14 object-contain" />
+            <span className="text-5xl">👑</span>
           </div>
         </div>
 
