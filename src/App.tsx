@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import logo from "./assets/MR.png";
 
 // ---------- Types ----------
-type SectionId = "divisa" | "ideais" | "pacto" | "hino";
+type SectionId = "divisa" | "ideais" | "pacto" | "hino" | "igreja";
 
 // ---------- Data ----------
 const ideais = [
@@ -99,6 +99,7 @@ function Navbar() {
     { label: "Ideais", id: "ideais" },
     { label: "Pacto", id: "pacto" },
     { label: "Hino", id: "hino" },
+    { label: "Igreja", id: "igreja" },
   ];
 
   const scrollTo = (id: SectionId) => {
@@ -727,6 +728,56 @@ function HinoSection() {
   );
 }
 
+function IgrejaSection() {
+  const { ref, inView } = useInView();
+
+  return (
+    <section id="igreja" className="py-24 px-4 bg-white">
+      <div
+        ref={ref}
+        className="max-w-4xl mx-auto text-center transition-all duration-1000"
+        style={{
+          opacity: inView ? 1 : 0,
+          transform: inView ? "translateY(0)" : "translateY(40px)",
+        }}
+      >
+        <SectionTitle subtitle="Nossa comunidade">Igreja Local</SectionTitle>
+
+        <p className="text-gray-600 mb-8">
+          Conheça nossa igreja e entre em contato conosco.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-4">
+          {/* WhatsApp */}
+          <a
+            href="https://wa.me/5575999450485"
+            target="_blank"
+            className="px-6 py-3 rounded-full font-bold text-white"
+            style={{
+              background: "#25D366",
+            }}
+          >
+            WhatsApp
+          </a>
+
+          {/* Site MCM */}
+          <a
+            href="https://www.mulheresbatistas.org.br/"
+            target="_blank"
+            className="px-6 py-3 rounded-full font-bold"
+            style={{
+              background: "#f0c030",
+              color: "#0a3318",
+            }}
+          >
+            Site MCM
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Footer() {
   return (
     <footer
@@ -798,6 +849,7 @@ export default function App() {
       <IdeaisSection />
       <PactoSection />
       <HinoSection />
+      <IgrejaSection />
       <Footer />
     </div>
   );
