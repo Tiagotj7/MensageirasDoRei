@@ -1,4 +1,7 @@
+//src/App.tsx
+
 import { useState, useEffect, useRef } from "react";
+import logo from "./assets/MR.png";
 
 // ---------- Types ----------
 type SectionId = "divisa" | "ideais" | "pacto" | "hino";
@@ -117,11 +120,8 @@ function Navbar() {
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <div
-            className="w-11 h-11 rounded-full flex items-center justify-center text-xl font-bold shadow-lg"
-            style={{ background: "linear-gradient(135deg, #d4a017, #f0c030)", color: "#0f4420" }}
-          >
-            👑
+          <div className="w-11 h-11 rounded-full flex items-center justify-center shadow-lg overflow-hidden">
+            <img src={logo} alt="logo" className="w-full h-full object-contain" />
           </div>
           <div>
             <p className="font-bold text-white leading-tight" style={{ fontFamily: "Cinzel, serif", fontSize: "0.95rem" }}>
@@ -224,7 +224,7 @@ function Hero() {
               boxShadow: "0 0 60px rgba(240,192,48,0.5), 0 0 120px rgba(240,192,48,0.2)",
             }}
           >
-            <span className="text-5xl">👑</span>
+            <img src={logo} alt="logo" className="w-14 h-14 object-contain" />
           </div>
         </div>
 
@@ -393,8 +393,9 @@ function DivisaSection() {
             Isaías 60.1a
           </p>
 
-          <div className="mt-8 text-5xl">👑</div>
-        </div>
+          <div className="mt-8 flex justify-center">
+            <img src={logo} alt="logo" className="w-12 h-12 object-contain" />
+          </div>        </div>
       </div>
     </section>
   );
@@ -579,7 +580,9 @@ function PactoSection() {
             >
               "{pactoClosing}"
             </p>
-            <div className="mt-4 text-3xl">👑</div>
+            <div className="mt-4 flex justify-center">
+              <img src={logo} alt="logo" className="w-10 h-10 object-contain" />
+            </div>
           </div>
 
           {/* Bottom ornament */}
@@ -733,11 +736,8 @@ function Footer() {
       <div className="max-w-4xl mx-auto">
         {/* Logo */}
         <div className="flex flex-col items-center mb-8">
-          <div
-            className="w-16 h-16 rounded-full flex items-center justify-center text-3xl mb-4 shadow-xl"
-            style={{ background: "linear-gradient(135deg, #b8860b, #d4a017, #f0c030)" }}
-          >
-            👑
+          <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 shadow-xl overflow-hidden">
+            <img src={logo} alt="logo" className="w-full h-full object-contain" />
           </div>
           <h3
             className="text-white font-bold text-xl"
